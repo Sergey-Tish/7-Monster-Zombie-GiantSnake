@@ -1,5 +1,4 @@
 abstract class Monster {
-    //Fix this class
     private String name;
     private int force;
     boolean alive = true;

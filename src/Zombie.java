@@ -1,6 +1,5 @@
 public class Zombie extends Monster {
     public final static String scream = "Raaaauuughhhh";
-    //Fix this class
     public Zombie(String name) {
         super(name + " the Zombie", 5);
     }

@@ -13,6 +13,4 @@ public class GiantSnake extends Monster {
     public void attack(Monster monster) {
         growl();
     }
-
-
 }

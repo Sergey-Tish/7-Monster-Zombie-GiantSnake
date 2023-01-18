@@ -14,6 +14,5 @@ public class Zombie extends Monster {
         monster.damage(getForce());
         growl();
     }
-
-
 }
+

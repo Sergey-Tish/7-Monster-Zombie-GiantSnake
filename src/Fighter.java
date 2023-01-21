@@ -1,5 +1,5 @@
 interface Fighter {
     //Interface must be here
-    default void attack(Entity entity){
+    default void attack(Entity entity) {
     }
 }

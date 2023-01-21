@@ -1,11 +1,11 @@
-abstract class Entity{
+abstract class Entity {
     private String name;
     private int hp;
     private boolean destroyed = false;
 
-    protected boolean damage(int dhp){
+    protected boolean damage(int dhp) {
         hp -= dhp;
-        if (hp < 0){
+        if (hp < 0) {
             destroyed = true;
             System.out.println("Monster " + name + " was destroyed");
             return true;
@@ -17,7 +17,7 @@ abstract class Entity{
         this.name = name;
     }
 
-    public boolean isDestroyed(){
+    public boolean isDestroyed() {
         return destroyed;
     }
 } 

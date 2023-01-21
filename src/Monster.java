@@ -9,10 +9,10 @@ public abstract class Monster extends Entity {
         System.out.println("Monster " + name + " was created");
     }
 
-    protected int getForce(){
+    protected int getForce() {
         return force;
     }
 
-    public void growl(){
+    public void growl() {
     }
 }

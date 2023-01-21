@@ -4,11 +4,11 @@ public class Zombie extends Monster implements Fighter {
         super(name + " the Zombie", 5);
     }
 
-    public void growl(){
+    public void growl() {
         System.out.println("Raaaauuughhhh");
     }
 
-    public void attack(Entity entity){
+    public void attack(Entity entity) {
         entity.damage(getForce());
         growl();
     }

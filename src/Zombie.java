@@ -8,8 +8,8 @@ public class Zombie extends Monster implements Fighter {
         System.out.println("Raaaauuughhhh");
     }
 
-    public void attack(Monster monster){
-        monster.damage(getForce());
+    public void attack(Entity entity){
+        entity.damage(getForce());
         growl();
     }
 

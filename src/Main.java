@@ -8,7 +8,6 @@ Make class Entity - the superclass for all entities
 Fix class Zombie and ...
 
 */
-
         Battle battle = new Battle();
         battle.add(new Zombie("Alice"));
         battle.add(new Human("Vasiliy"));
@@ -16,17 +15,10 @@ Fix class Zombie and ...
         battle.add(new Tower("Big Ben"));
 
         battle.start();
-
-
 /*
-
                        ...and The GreatBattle starts!
-
-
-
 */
     }
-
 }
 /*
 Все классы открыты, можете их изучить, но вам нужно исправить только файлы Monster, Zombie, Entity и Fighter.

@@ -2,6 +2,7 @@
 public class Player extends Human {
 
     Backpack backpack = new Backpack();
+
     public Player(String name) {
         super(name);
     }
@@ -26,13 +27,16 @@ public class Player extends Human {
         @Override
         public java.lang.String toString() {
             if (!isEmpty)
-            return containBackpack + " in the backpack";
+                return containBackpack + " in the backpack";
             else return "the backpack is empty";
         }
     }
 
+
+    // TEST for inner class
     StringBuilder stringBuilderPlayer = new StringBuilder("123456");
-    void voidTestInnerClass () {
+
+    void voidTestInnerClass() {
         StringBuilder testString = new StringBuilder(getName());
         TestInnerClass testInnerClass = new TestInnerClass();
 
@@ -45,20 +49,12 @@ public class Player extends Human {
         class TestInnerClass { // IS NOT WORKING?
             StringBuilder str = testString;
             StringBuilder str2 = stringBuilderPlayer;
-
-            public void redStrPlayer() {
-                stringBuilderPlayer.append("ssss");
-            }
         }
     }
 
     private class TestInnerClass {
         StringBuilder str1 = new StringBuilder().append(stringBuilderPlayer);
         StringBuilder str2 = stringBuilderPlayer;
-
-        public void redStrPlayer() {
-            stringBuilderPlayer.append("ssss");
-        }
     }
 }
 

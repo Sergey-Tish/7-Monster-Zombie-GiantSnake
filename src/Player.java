@@ -15,6 +15,10 @@ public class Player extends Human {
         }
     }
 
+    public String toString() {
+        return getName() + " he has " + backpack.toString();
+    }
+
     class Backpack {
         StringBuilder containBackpack = new StringBuilder("");
         boolean isEmpty = true;
@@ -24,6 +28,20 @@ public class Player extends Human {
             if (!isEmpty)
             return containBackpack + " in the backpack";
             else return "the backpack is empty";
+        }
+    }
+
+    StringBuilder stringBuilderPlayer = new StringBuilder("123456");
+    void voidTestInnerClass () {
+        StringBuilder testString = new StringBuilder(getName());
+
+        class TestInnerClass {
+            StringBuilder str = testString;
+            StringBuilder str2 = stringBuilderPlayer;
+
+            public void redStrPlayer() {
+                stringBuilderPlayer.append("ssss");
+            }
         }
     }
 }
@@ -44,6 +62,7 @@ Extend Human class by Player class with inner Backpack
         player.take("bottle");
         player.take("flower");
         System.out.println(pb);
+        System.out.println(player);
 
 /*
         The code above has to output:

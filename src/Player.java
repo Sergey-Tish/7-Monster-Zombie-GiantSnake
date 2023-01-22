@@ -34,14 +34,30 @@ public class Player extends Human {
     StringBuilder stringBuilderPlayer = new StringBuilder("123456");
     void voidTestInnerClass () {
         StringBuilder testString = new StringBuilder(getName());
+        TestInnerClass testInnerClass = new TestInnerClass();
 
-        class TestInnerClass {
+        System.out.println(testInnerClass.str2);
+        System.out.println(testInnerClass.str1);
+        stringBuilderPlayer.append("11111");
+        System.out.println(testInnerClass.str1);
+        System.out.println(testInnerClass.str2);
+
+        class TestInnerClass { // IS NOT WORKING?
             StringBuilder str = testString;
             StringBuilder str2 = stringBuilderPlayer;
 
             public void redStrPlayer() {
                 stringBuilderPlayer.append("ssss");
             }
+        }
+    }
+
+    private class TestInnerClass {
+        StringBuilder str1 = new StringBuilder().append(stringBuilderPlayer);
+        StringBuilder str2 = stringBuilderPlayer;
+
+        public void redStrPlayer() {
+            stringBuilderPlayer.append("ssss");
         }
     }
 }
@@ -63,6 +79,7 @@ Extend Human class by Player class with inner Backpack
         player.take("flower");
         System.out.println(pb);
         System.out.println(player);
+        player.voidTestInnerClass();
 
 /*
         The code above has to output:

@@ -65,7 +65,6 @@ class MainPlayer {
 /*
 Extend Human class by Player class with inner Backpack
 */
-
         Player player = new Player("Tourist");
         Player.Backpack pb = player.backpack;
         System.out.println(pb);
@@ -74,9 +73,9 @@ Extend Human class by Player class with inner Backpack
         player.take("bottle");
         player.take("flower");
         System.out.println(pb);
+        player.take("stone");
         System.out.println(player);
         player.voidTestInnerClass();
-
 /*
         The code above has to output:
 the backpack is empty

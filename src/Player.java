@@ -74,6 +74,7 @@ Extend Human class by Player class with inner Backpack
         player.take("flower");
         System.out.println(pb);
         player.take("stone");
+        System.out.println(pb);
         System.out.println(player);
         player.voidTestInnerClass();
 /*
